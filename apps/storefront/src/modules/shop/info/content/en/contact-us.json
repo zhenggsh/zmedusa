@@ -1,0 +1,11 @@
+{
+  "title": "Contact Us",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Customer Support" },
+    { "type": "paragraph", "text": "Our support team is available 24/7 to assist you with any questions or concerns." },
+    { "type": "heading", "level": 2, "text": "Contact Methods" },
+    { "type": "list", "items": ["Email: support@zshop.com", "Live Chat: Available on every page", "Phone: +45 12 34 56 78 (Mon-Fri 9:00-18:00 CET)"] },
+    { "type": "heading", "level": 2, "text": "Response Time" },
+    { "type": "paragraph", "text": "We aim to respond to all inquiries within 24 hours during business days." }
+  ]
+}

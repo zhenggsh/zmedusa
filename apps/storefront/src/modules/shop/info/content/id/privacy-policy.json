@@ -1,0 +1,11 @@
+{
+  "title": "Kebijakan Privasi",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Informasi yang Kami Kumpulkan" },
+    { "type": "paragraph", "text": "Kami mengumpulkan informasi yang Anda berikan langsung kepada kami, termasuk nama, alamat email, alamat pengiriman, dan informasi pembayaran." },
+    { "type": "heading", "level": 2, "text": "Cara Kami Menggunakan Informasi Anda" },
+    { "type": "list", "items": ["Untuk memproses dan memenuhi pesanan Anda", "Untuk berkomunikasi dengan Anda tentang akun Anda", "Untuk meningkatkan layanan kami", "Untuk mematuhi kewajiban hukum"] },
+    { "type": "heading", "level": 2, "text": "Keamanan Data" },
+    { "type": "paragraph", "text": "Kami menerapkan tindakan teknis dan organisasi yang sesuai untuk melindungi data pribadi Anda dari akses, perubahan, atau penghancuran yang tidak sah." }
+  ]
+}

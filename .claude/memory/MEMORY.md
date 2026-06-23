@@ -1,0 +1,4 @@
+- [Project Overview](project_overview.md) — Monorepo structure, tech stack, key conventions
+- [Storefront Module Map](storefront_modules.md) — All UI modules, components, templates, and responsibilities
+- [Backend Data & Seed Model](backend_data_model.md) — Regions, products, categories, inventory, shipping options
+- [UI Integration Points](integration_points.md) — Exact files to modify for storefront redesigns

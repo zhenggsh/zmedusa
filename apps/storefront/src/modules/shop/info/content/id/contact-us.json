@@ -1,0 +1,11 @@
+{
+  "title": "Hubungi Kami",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Dukungan Pelanggan" },
+    { "type": "paragraph", "text": "Tim dukungan kami tersedia 24/7 untuk membantu Anda dengan pertanyaan atau kekhawatiran apa pun." },
+    { "type": "heading", "level": 2, "text": "Metode Kontak" },
+    { "type": "list", "items": ["Email: support@zshop.com", "Live Chat: Tersedia di setiap halaman", "Telepon: +45 12 34 56 78 (Sen-Jum 9:00-18:00 CET)"] },
+    { "type": "heading", "level": 2, "text": "Waktu Respons" },
+    { "type": "paragraph", "text": "Kami bertujuan untuk merespons semua pertanyaan dalam waktu 24 jam pada hari kerja." }
+  ]
+}

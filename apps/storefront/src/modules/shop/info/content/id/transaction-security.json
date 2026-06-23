@@ -1,0 +1,11 @@
+{
+  "title": "Keamanan Transaksi",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Pembayaran Aman" },
+    { "type": "paragraph", "text": "Semua transaksi diproses melalui gerbang pembayaran yang sesuai dengan standar PCI-DSS. Informasi kartu Anda tidak pernah disimpan di server kami." },
+    { "type": "heading", "level": 2, "text": "Enkripsi" },
+    { "type": "paragraph", "text": "Kami menggunakan enkripsi TLS 1.3 untuk semua transmisi data antara browser Anda dan server kami." },
+    { "type": "heading", "level": 2, "text": "Pencegahan Penipuan" },
+    { "type": "list", "items": ["Pemantauan transaksi real-time", "Otentikasi 3D Secure", "Verifikasi alamat", "Peringatan aktivitas mencurigakan"] }
+  ]
+}

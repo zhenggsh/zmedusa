@@ -1,0 +1,12 @@
+{
+  "title": "About Us",
+  "subtitle": "Learn more about ZShop",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Who We Are" },
+    { "type": "paragraph", "text": "ZShop is a premium digital goods marketplace specializing in gaming top-ups, virtual items, and digital services. Founded in 2024, we serve customers across Europe, Asia, and beyond." },
+    { "type": "heading", "level": 2, "text": "Our Mission" },
+    { "type": "paragraph", "text": "To provide fast, secure, and reliable digital transactions with exceptional customer support and competitive pricing." },
+    { "type": "heading", "level": 2, "text": "Why Choose Us" },
+    { "type": "list", "items": ["Instant delivery on all digital products", "24/7 customer support", "Secure payment processing", "Multi-language support"] }
+  ]
+}

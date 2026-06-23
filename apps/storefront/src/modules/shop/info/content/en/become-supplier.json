@@ -1,0 +1,9 @@
+{
+  "title": "Become a Supplier",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Join Our Network" },
+    { "type": "paragraph", "text": "Partner with ZShop to reach a global audience of digital goods consumers." },
+    { "type": "heading", "level": 2, "text": "Requirements" },
+    { "type": "list", "items": ["Valid business registration", "High-quality digital products", "Competitive pricing", "Reliable inventory management"] }
+  ]
+}

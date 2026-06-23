@@ -1,0 +1,9 @@
+{
+  "title": "Global Office",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Headquarters" },
+    { "type": "paragraph", "text": "ZShop ApS, Copenhagen, Denmark" },
+    { "type": "heading", "level": 2, "text": "Regional Offices" },
+    { "type": "list", "items": ["Europe: Copenhagen, Denmark", "Asia Pacific: Bangkok, Thailand", "Southeast Asia: Jakarta, Indonesia"] }
+  ]
+}

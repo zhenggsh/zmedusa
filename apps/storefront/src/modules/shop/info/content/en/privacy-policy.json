@@ -1,0 +1,11 @@
+{
+  "title": "Privacy Policy",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Information We Collect" },
+    { "type": "paragraph", "text": "We collect information you provide directly to us, including your name, email address, shipping address, and payment information." },
+    { "type": "heading", "level": 2, "text": "How We Use Your Information" },
+    { "type": "list", "items": ["To process and fulfill your orders", "To communicate with you about your account", "To improve our services", "To comply with legal obligations"] },
+    { "type": "heading", "level": 2, "text": "Data Security" },
+    { "type": "paragraph", "text": "We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, or destruction." }
+  ]
+}

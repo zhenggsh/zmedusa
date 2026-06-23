@@ -1,0 +1,12 @@
+{
+  "title": "Tentang Kami",
+  "subtitle": "Pelajari lebih lanjut tentang ZShop",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Siapa Kami" },
+    { "type": "paragraph", "text": "ZShop adalah marketplace barang digital premium yang mengkhususkan diri dalam top-up game, item virtual, dan layanan digital. Didirikan pada tahun 2024, kami melayani pelanggan di Eropa, Asia, dan beyond." },
+    { "type": "heading", "level": 2, "text": "Misi Kami" },
+    { "type": "paragraph", "text": "Menyediakan transaksi digital yang cepat, aman, dan andal dengan dukungan pelanggan yang luar biasa dan harga yang kompetitif." },
+    { "type": "heading", "level": 2, "text": "Mengapa Memilih Kami" },
+    { "type": "list", "items": ["Pengiriman instan untuk semua produk digital", "Dukungan pelanggan 24/7", "Pemrosesan pembayaran yang aman", "Dukungan multi-bahasa"] }
+  ]
+}
