@@ -1,6 +1,7 @@
 import { cookies } from "next/headers"
 import { listRegions } from "@lib/data/regions"
 import { retrieveCustomer } from "@lib/data/customer"
+import { retrieveCart } from "@lib/data/cart"
 import { Header } from "@modules/shop/layout/header"
 import { Footer } from "@modules/shop/layout/footer"
 import { ToastProvider } from "@modules/shop/components/toast-provider"
@@ -29,6 +30,10 @@ export default async function ShopLayout({
 
   const customer = await retrieveCustomer().catch(() => null)
 
+  const cart = await retrieveCart().catch(() => null)
+  const cartCount =
+    cart?.items?.reduce((acc, item) => acc + (item.quantity ?? 0), 0) ?? 0
+
   return (
     <div className="min-h-screen bg-shop-bg-primary text-shop-text-primary flex flex-col">
       <Header
@@ -37,6 +42,7 @@ export default async function ShopLayout({
         countryCode={countryCode}
         locale={locale}
         isLoggedIn={!!customer}
+        cartCount={cartCount}
       />
       <ToastProvider>
         <main className="flex-1 pt-16">{children}</main>
