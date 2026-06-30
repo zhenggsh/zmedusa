@@ -1,8 +1,7 @@
-import { HttpTypes } from "@medusajs/types"
 import { convertToLocale } from "@lib/util/money"
 
 export function formatPrice(
-  cart: HttpTypes.StoreCart | null | undefined,
+  cart: { currency_code?: string | null } | null | undefined,
   amount?: number | null,
   locale?: string
 ): string {

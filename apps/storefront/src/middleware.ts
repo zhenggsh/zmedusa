@@ -105,6 +105,22 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next()
   }
 
+  // If a shop checkout session placed an order, redirect the default confirmation page to the shop confirmation page.
+  const shopCheckoutCookie = request.cookies.get("shop-checkout")
+  const orderConfirmedMatch = request.nextUrl.pathname.match(
+    /^\/[a-z]{2}\/order\/[^/]+\/confirmed$/i
+  )
+  if (shopCheckoutCookie?.value === "true" && orderConfirmedMatch) {
+    const newPath = request.nextUrl.pathname.replace(
+      /^\/[a-z]{2}\/order/,
+      `/${request.nextUrl.pathname.split("/")[1]}/shop/order`
+    )
+    const redirectUrl = new URL(newPath + request.nextUrl.search, request.nextUrl.origin)
+    const response = NextResponse.redirect(redirectUrl)
+    response.cookies.set("shop-checkout", "", { maxAge: 0, path: "/" })
+    return response
+  }
+
   const cacheIdCookie = request.cookies.get("_medusa_cache_id")
   const cacheId = cacheIdCookie?.value || crypto.randomUUID()
 
