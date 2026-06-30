@@ -117,14 +117,26 @@ export async function middleware(request: NextRequest) {
   const urlHasCountry = firstPathSegment === country.toLowerCase()
 
   if (urlHasCountry) {
+    const response = NextResponse.next()
+
     if (!cacheIdCookie) {
-      const response = NextResponse.next()
       response.cookies.set("_medusa_cache_id", cacheId, {
         maxAge: 60 * 60 * 24,
       })
-      return response
     }
-    return NextResponse.next()
+
+    // Mark a shop checkout session so the order confirmation can be redirected to the shop confirmation page.
+    const isShopCheckout = request.nextUrl.pathname.match(
+      /^\/[a-z]{2}\/shop\/checkout$/i
+    )
+    if (isShopCheckout) {
+      response.cookies.set("shop-checkout", "true", {
+        path: "/",
+        maxAge: 60 * 60, // 1 hour
+      })
+    }
+
+    return response
   }
 
   // if the url doesn't have the country, redirect to it
