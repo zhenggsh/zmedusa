@@ -2,12 +2,14 @@
 
 import { HttpTypes } from "@medusajs/types"
 import clsx from "clsx"
+import { isVariantInStock } from "../lib/product"
 
 interface VariantSelectorProps {
   options: HttpTypes.StoreProductOption[]
   variants: HttpTypes.StoreProductVariant[]
   selectedOptions: Record<string, string>
   onSelect: (optionId: string, value: string) => void
+  disabled?: boolean
 }
 
 export function VariantSelector({
@@ -15,14 +17,14 @@ export function VariantSelector({
   variants,
   selectedOptions,
   onSelect,
+  disabled,
 }: VariantSelectorProps) {
   if (!options?.length) return null
 
   function isOptionValueEnabled(optionId: string, value: string) {
     const hypothetical = { ...selectedOptions, [optionId]: value }
     return variants.some((variant) => {
-      const inventory = (variant as any).inventory_quantity ?? 1
-      if (inventory <= 0) return false
+      if (!isVariantInStock(variant)) return false
       const variantOptions = variant.options
       if (!variantOptions?.length) return false
       return variantOptions.every((opt) => {
@@ -51,9 +53,9 @@ export function VariantSelector({
                   type="button"
                   role="option"
                   aria-selected={isSelected}
-                  aria-disabled={!isEnabled}
-                  disabled={!isEnabled}
-                  onClick={() => isEnabled && onSelect(option.id!, value!)}
+                  aria-disabled={!isEnabled || disabled}
+                  disabled={!isEnabled || disabled}
+                  onClick={() => isEnabled && !disabled && onSelect(option.id!, value!)}
                   className={clsx(
                     "px-4 py-2 rounded-shop-button text-sm border transition-all",
                     isSelected

@@ -102,6 +102,7 @@ export interface Dictionary {
   }
   cart: {
     title: string
+    item_added: string
     empty: string
     continue_shopping: string
     proceed_to_checkout: string

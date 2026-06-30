@@ -99,6 +99,7 @@
   },
   "cart": {
     "title": "Your Cart",
+    "item_added": "Ditambahkan ke keranjang",
     "empty": "Your cart is empty",
     "continue_shopping": "Continue Shopping",
     "proceed_to_checkout": "Proceed to Checkout",
