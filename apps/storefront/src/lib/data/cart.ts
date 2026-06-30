@@ -1,5 +1,6 @@
 "use server"
 
+import { cookies as nextCookies } from "next/headers"
 import { sdk } from "@lib/config"
 import medusaError from "@lib/util/medusa-error"
 import { HttpTypes } from "@medusajs/types"
@@ -339,7 +340,7 @@ export async function setAddresses(currentState: unknown, formData: FormData) {
     if (!formData) {
       throw new Error("No form data found when setting addresses")
     }
-    const cartId = getCartId()
+    const cartId = await getCartId()
     if (!cartId) {
       throw new Error("No existing cart found when setting addresses")
     }
@@ -381,9 +382,12 @@ export async function setAddresses(currentState: unknown, formData: FormData) {
     return e.message
   }
 
-  redirect(
-    `/${formData.get("shipping_address.country_code")}/checkout?step=delivery`
-  )
+  const countryCode = String(formData.get("shipping_address.country_code"))
+  const cookieStore = await nextCookies()
+  const shopCheckout = cookieStore.get("shop-checkout")?.value
+  const checkoutPath = shopCheckout === "true" ? `${countryCode}/shop/checkout` : `${countryCode}/checkout`
+
+  redirect(`/${checkoutPath}?step=delivery`)
 }
 
 /**
