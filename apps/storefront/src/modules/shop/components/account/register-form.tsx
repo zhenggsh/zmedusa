@@ -1,6 +1,6 @@
 "use client"
 
-import { useActionState } from "react"
+import { useActionState, useEffect } from "react"
 import { signup } from "@lib/data/customer"
 import { Input } from "../ui"
 import { Button } from "../ui"
@@ -12,10 +12,13 @@ interface RegisterFormProps {
 }
 
 export function RegisterForm({ dictionary, onToggleLogin }: RegisterFormProps) {
-  const [message, formAction] = useActionState(
-    signup as (state: string | null, formData: FormData) => Promise<string | null>,
-    null as string | null
-  )
+  const [message, formAction] = useActionState(signup, null)
+
+  useEffect(() => {
+    if (message && typeof message !== "string") {
+      window.location.reload()
+    }
+  }, [message])
 
   return (
     <div className="w-full max-w-sm mx-auto">
@@ -29,38 +32,38 @@ export function RegisterForm({ dictionary, onToggleLogin }: RegisterFormProps) {
       <form action={formAction} className="space-y-4">
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+            <label htmlFor="first_name" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
               {dictionary.auth.first_name}
             </label>
-            <Input name="first_name" required autoComplete="given-name" />
+            <Input id="first_name" name="first_name" required autoComplete="given-name" />
           </div>
           <div>
-            <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+            <label htmlFor="last_name" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
               {dictionary.auth.last_name}
             </label>
-            <Input name="last_name" required autoComplete="family-name" />
+            <Input id="last_name" name="last_name" required autoComplete="family-name" />
           </div>
         </div>
         <div>
-          <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+          <label htmlFor="email" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
             {dictionary.auth.email}
           </label>
-          <Input name="email" type="email" required autoComplete="email" />
+          <Input id="email" name="email" type="email" required autoComplete="email" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+          <label htmlFor="phone" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
             {dictionary.auth.phone}
           </label>
-          <Input name="phone" type="tel" autoComplete="tel" />
+          <Input id="phone" name="phone" type="tel" autoComplete="tel" />
         </div>
         <div>
-          <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+          <label htmlFor="password" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
             {dictionary.auth.password}
           </label>
-          <Input name="password" type="password" required autoComplete="new-password" />
+          <Input id="password" name="password" type="password" required autoComplete="new-password" />
         </div>
 
-        {message && (
+        {typeof message === "string" && message && (
           <p className="text-red-400 text-sm">{message}</p>
         )}
 

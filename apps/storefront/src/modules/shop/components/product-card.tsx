@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { HttpTypes } from "@medusajs/types"
 import { ProductPrice } from "./product-price"
 
@@ -17,12 +18,13 @@ export function ProductCard({ product, region, countryCode }: ProductCardProps) 
       className="group block"
     >
       <div className="bg-shop-bg-secondary border border-shop-border rounded-shop-card overflow-hidden transition-all duration-300 ease-out shadow-shop-card hover:-translate-y-1 hover:shadow-shop-card-hover hover:border-shop-gold/30">
-        <div className="aspect-square overflow-hidden bg-shop-bg-primary">
-          <img
+        <div className="aspect-square overflow-hidden bg-shop-bg-primary relative">
+          <Image
             src={thumbnail}
-            alt={product.title ?? "Product"}
-            className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
+            alt={product.title ?? ""}
+            fill
+            sizes="(max-width: 768px) 50vw, 25vw"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
         <div className="p-4">

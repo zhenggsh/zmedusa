@@ -1,6 +1,6 @@
 "use client"
 
-import { useActionState } from "react"
+import { useActionState, useEffect } from "react"
 import { login } from "@lib/data/customer"
 import { Input } from "../ui"
 import { Button } from "../ui"
@@ -8,11 +8,18 @@ import { Dictionary } from "../../lib/i18n/get-dictionary"
 
 interface LoginFormProps {
   dictionary: Dictionary
+  redirectUrl?: string
   onToggleRegister: () => void
 }
 
-export function LoginForm({ dictionary, onToggleRegister }: LoginFormProps) {
+export function LoginForm({ dictionary, redirectUrl, onToggleRegister }: LoginFormProps) {
   const [message, formAction] = useActionState(login, null)
+
+  useEffect(() => {
+    if (message === undefined && redirectUrl) {
+      window.location.href = redirectUrl
+    }
+  }, [message, redirectUrl])
 
   return (
     <div className="w-full max-w-sm mx-auto">
@@ -25,10 +32,11 @@ export function LoginForm({ dictionary, onToggleRegister }: LoginFormProps) {
 
       <form action={formAction} className="space-y-4">
         <div>
-          <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+          <label htmlFor="email" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
             {dictionary.auth.email}
           </label>
           <Input
+            id="email"
             name="email"
             type="email"
             autoComplete="email"
@@ -37,10 +45,11 @@ export function LoginForm({ dictionary, onToggleRegister }: LoginFormProps) {
           />
         </div>
         <div>
-          <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+          <label htmlFor="password" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
             {dictionary.auth.password}
           </label>
           <Input
+            id="password"
             name="password"
             type="password"
             autoComplete="current-password"
@@ -48,8 +57,8 @@ export function LoginForm({ dictionary, onToggleRegister }: LoginFormProps) {
           />
         </div>
 
-        {message && (
-          <p className="text-red-400 text-sm">{dictionary.auth.error_invalid_credentials}</p>
+        {typeof message === "string" && message && (
+          <p className="text-red-400 text-sm">{message}</p>
         )}
 
         <Button type="submit" size="lg" className="w-full">

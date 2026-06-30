@@ -7,6 +7,9 @@ import { ImageGallery } from "@modules/shop/components/image-gallery"
 import { ProductPrice } from "@modules/shop/components/product-price"
 import { Breadcrumb } from "@modules/shop/components/breadcrumb"
 import { ProductActions } from "@modules/shop/components/product-actions"
+import { getDictionary } from "@modules/shop/lib/i18n/get-dictionary"
+import { i18n, Locale } from "@modules/shop/lib/i18n/config"
+import { cookies } from "next/headers"
 
 interface Props {
   params: Promise<{ countryCode: string; handle: string }>
@@ -24,7 +27,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
   const product = response.products[0]
 
   return {
-    title: product?.title ?? "Product",
+    title: product?.title ?? handle,
     description: product?.description ?? "",
   }
 }
@@ -32,6 +35,13 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
 export default async function ProductDetailPage(props: Props) {
   const params = await props.params
   const { countryCode, handle } = params
+
+  const cookieStore = await cookies()
+  const localeCookie = cookieStore.get("_shop_locale")?.value
+  const locale: Locale = i18n.locales.includes(localeCookie as Locale)
+    ? (localeCookie as Locale)
+    : i18n.defaultLocale
+  const dictionary = await getDictionary(locale)
 
   const region = await getRegion(countryCode)
   if (!region) notFound()
@@ -50,7 +60,7 @@ export default async function ProductDetailPage(props: Props) {
     <Container className="py-8">
       <Breadcrumb
         items={[
-          { label: "Shop", href: `/${countryCode}/shop` },
+          { label: dictionary.header.logo, href: `/${countryCode}/shop` },
           { label: product.title ?? handle },
         ]}
       />
@@ -74,7 +84,7 @@ export default async function ProductDetailPage(props: Props) {
               {product.description}
             </p>
           )}
-          <ProductActions product={product} countryCode={countryCode} />
+          <ProductActions product={product} countryCode={countryCode} dictionary={dictionary} />
         </div>
       </div>
     </Container>

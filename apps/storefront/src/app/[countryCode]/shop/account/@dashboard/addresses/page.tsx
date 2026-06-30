@@ -1,9 +1,9 @@
 import { retrieveCustomer } from "@lib/data/customer"
-import { addCustomerAddress, deleteCustomerAddress } from "@lib/data/customer"
+import { addCustomerAddress } from "@lib/data/customer"
 import { listRegions } from "@lib/data/regions"
 import { notFound } from "next/navigation"
 import { AccountLayout } from "@modules/shop/components/account/account-layout"
-import { AddressCard } from "@modules/shop/components/account/address-card"
+import { AddressList } from "@modules/shop/components/account/address-list"
 import { AddressForm } from "@modules/shop/components/account/address-form"
 import { getDictionary } from "@modules/shop/lib/i18n/get-dictionary"
 import { i18n, Locale } from "@modules/shop/lib/i18n/config"
@@ -44,25 +44,7 @@ export default async function ShopAddressesPage({
       <div className="space-y-6">
         <h1 className="text-2xl font-bold text-shop-text-primary">{dictionary.account.addresses}</h1>
 
-        {addresses.length === 0 ? (
-          <p className="text-shop-text-secondary text-sm">{dictionary.account.no_addresses}</p>
-        ) : (
-          <div className="space-y-4">
-            {addresses.map((address: any) => (
-              <div key={address.id} className="space-y-2">
-                <AddressCard
-                  address={address}
-                  dictionary={dictionary}
-                  onEdit={() => {}}
-                  onDelete={() => {}}
-                />
-                <form action={deleteCustomerAddress.bind(null, address.id)}>
-                  <button type="submit" className="hidden">Delete</button>
-                </form>
-              </div>
-            ))}
-          </div>
-        )}
+        <AddressList addresses={addresses} dictionary={dictionary} regions={regions} />
 
         <h2 className="text-lg font-semibold text-shop-text-primary pt-4">
           {dictionary.account.add_address}

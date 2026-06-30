@@ -47,10 +47,12 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
   )
 
   useEffect(() => {
-    toasts.forEach((toast) => {
-      const timer = setTimeout(() => removeToast(toast.id), 3000)
-      return () => clearTimeout(timer)
-    })
+    const timers = toasts.map((toast) =>
+      setTimeout(() => removeToast(toast.id), 3000)
+    )
+    return () => {
+      timers.forEach(clearTimeout)
+    }
   }, [toasts, removeToast])
 
   return (

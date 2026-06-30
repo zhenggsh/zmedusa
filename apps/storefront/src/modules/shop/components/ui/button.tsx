@@ -7,6 +7,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "text" | "icon"
   size?: "sm" | "md" | "lg"
   isLoading?: boolean
+  loadingText?: string
   asChild?: boolean
 }
 
@@ -15,6 +16,7 @@ export function Button({
   variant = "primary",
   size = "md",
   isLoading,
+  loadingText = "Loading...",
   disabled,
   children,
   asChild,
@@ -40,6 +42,13 @@ export function Button({
 
   if (asChild && children) {
     const child = Children.only(children) as ReactElement<any>
+    if (disabled || isLoading) {
+      return (
+        <span className={classes} aria-disabled="true">
+          {isLoading ? loadingText : children}
+        </span>
+      )
+    }
     return cloneElement(child, {
       className: clsx(classes, child.props.className),
       ...props,
@@ -48,7 +57,7 @@ export function Button({
 
   return (
     <button disabled={disabled || isLoading} className={classes} {...props}>
-      {isLoading ? "Loading..." : children}
+      {isLoading ? loadingText : children}
     </button>
   )
 }

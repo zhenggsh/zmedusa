@@ -59,7 +59,7 @@ export default async function ShopAccountOverview({
                   </div>
                   <div className="text-right">
                     <p className="text-shop-gold font-semibold text-sm">
-                      {order.total?.toLocaleString?.() || order.total}
+                      {order.currency_code?.toUpperCase()} {(order.total / 100).toLocaleString(locale, { style: "currency", currency: order.currency_code })}
                     </p>
                     <p className="text-shop-text-muted text-xs capitalize">{order.status}</p>
                   </div>

@@ -24,7 +24,7 @@ export function ProfileForm({ customer, dictionary }: ProfileFormProps) {
         last_name: formData.get("last_name") as string,
         phone: formData.get("phone") as string,
       })
-      setIsEditing(false)
+      window.location.reload()
     } finally {
       setIsSaving(false)
     }
@@ -68,33 +68,33 @@ export function ProfileForm({ customer, dictionary }: ProfileFormProps) {
         <form action={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+              <label htmlFor="first_name" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
                 {dictionary.auth.first_name}
               </label>
-              <Input name="first_name" defaultValue={customer.first_name || ""} required />
+              <Input id="first_name" name="first_name" defaultValue={customer.first_name || ""} required />
             </div>
             <div>
-              <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+              <label htmlFor="last_name" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
                 {dictionary.auth.last_name}
               </label>
-              <Input name="last_name" defaultValue={customer.last_name || ""} required />
+              <Input id="last_name" name="last_name" defaultValue={customer.last_name || ""} required />
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+            <label htmlFor="email" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
               {dictionary.auth.email}
             </label>
-            <Input defaultValue={customer.email || ""} disabled className="opacity-50" />
+            <Input id="email" defaultValue={customer.email || ""} disabled className="opacity-50" />
             <p className="text-xs text-shop-text-muted mt-1">Email cannot be changed.</p>
           </div>
           <div>
-            <label className="block text-sm font-medium text-shop-text-secondary mb-1.5">
+            <label htmlFor="phone" className="block text-sm font-medium text-shop-text-secondary mb-1.5">
               {dictionary.auth.phone}
             </label>
-            <Input name="phone" defaultValue={customer.phone || ""} />
+            <Input id="phone" name="phone" defaultValue={customer.phone || ""} />
           </div>
           <div className="flex gap-3">
-            <Button type="submit" isLoading={isSaving}>
+            <Button type="submit" isLoading={isSaving} loadingText={dictionary.common.loading}>
               {dictionary.account.save_changes}
             </Button>
             <Button variant="secondary" type="button" onClick={() => setIsEditing(false)}>

@@ -37,7 +37,7 @@ export default async function ShopHomePage({
 
   return (
     <div>
-      <HeroSection countryCode={countryCode} />
+      <HeroSection countryCode={countryCode} dictionary={dictionary} />
       <Container>
         <ProductRail
           title={dictionary.common.new_arrivals ?? "New Arrivals"}

@@ -3,6 +3,9 @@ import { getRegion } from "@lib/data/regions"
 import { Container } from "@modules/shop/components/ui"
 import { ProductCard } from "@modules/shop/components/product-card"
 import { Breadcrumb } from "@modules/shop/components/breadcrumb"
+import { getDictionary } from "@modules/shop/lib/i18n/get-dictionary"
+import { i18n, Locale } from "@modules/shop/lib/i18n/config"
+import { cookies } from "next/headers"
 import Link from "next/link"
 
 interface Props {
@@ -16,19 +19,26 @@ export default async function SearchPage(props: Props) {
   const { countryCode } = params
   const query = searchParams.q ?? ""
 
+  const cookieStore = await cookies()
+  const localeCookie = cookieStore.get("_shop_locale")?.value
+  const locale: Locale = i18n.locales.includes(localeCookie as Locale)
+    ? (localeCookie as Locale)
+    : i18n.defaultLocale
+  const dictionary = await getDictionary(locale)
+
   if (!query.trim()) {
     return (
       <Container className="py-8">
         <Breadcrumb
           items={[
-            { label: "Shop", href: `/${countryCode}/shop` },
-            { label: "Search" },
+            { label: dictionary.header.logo, href: `/${countryCode}/shop` },
+            { label: dictionary.common.search },
           ]}
         />
-        <h1 className="text-2xl font-bold text-shop-text-primary mb-2">Search</h1>
-        <p className="text-shop-text-secondary mb-4">Enter a search term to find products.</p>
+        <h1 className="text-2xl font-bold text-shop-text-primary mb-2">{dictionary.common.search}</h1>
+        <p className="text-shop-text-secondary mb-4">{dictionary.common.search_prompt}</p>
         <Link href={`/${countryCode}/shop`} className="text-shop-gold hover:underline">
-          Browse all products
+          {dictionary.common.browse_all_products}
         </Link>
       </Container>
     )
@@ -50,24 +60,24 @@ export default async function SearchPage(props: Props) {
     <Container className="py-8">
       <Breadcrumb
         items={[
-          { label: "Shop", href: `/${countryCode}/shop` },
-          { label: `Search: "${query}"` },
+          { label: dictionary.header.logo, href: `/${countryCode}/shop` },
+          { label: `${dictionary.common.search}: "${query}"` },
         ]}
       />
       <h1 className="text-2xl font-bold text-shop-text-primary mb-2">
-        Search Results
+        {dictionary.common.search_results}
       </h1>
       <p className="text-shop-text-muted text-sm mb-6">
-        {products.length} result{products.length !== 1 ? "s" : ""} for &quot;{query}&quot;
+        {products.length} {dictionary.common.results_for} &quot;{query}&quot;
       </p>
 
       {products.length === 0 ? (
         <div className="text-center py-16">
           <p className="text-shop-text-secondary mb-4">
-            No products found for &quot;{query}&quot;
+            {dictionary.common.no_products_found} &quot;{query}&quot;
           </p>
           <Link href={`/${countryCode}/shop`} className="text-shop-gold hover:underline">
-            Browse all products
+            {dictionary.common.browse_all_products}
           </Link>
         </div>
       ) : (

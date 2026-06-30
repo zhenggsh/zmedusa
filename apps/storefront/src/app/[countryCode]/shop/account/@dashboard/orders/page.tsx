@@ -6,7 +6,6 @@ import { getDictionary } from "@modules/shop/lib/i18n/get-dictionary"
 import { i18n, Locale } from "@modules/shop/lib/i18n/config"
 import { cookies } from "next/headers"
 import { Metadata } from "next"
-import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Orders",
@@ -41,10 +40,9 @@ export default async function ShopOrdersPage({
         ) : (
           <div className="space-y-3">
             {orders.map((order: any) => (
-              <Link
+              <div
                 key={order.id}
-                href={`/${countryCode}/shop/account/orders/${order.id}`}
-                className="block p-4 bg-shop-bg-secondary rounded-lg border border-shop-border hover:border-shop-gold/30 transition-colors"
+                className="block p-4 bg-shop-bg-secondary rounded-lg border border-shop-border"
               >
                 <div className="flex items-center justify-between">
                   <div>
@@ -57,12 +55,12 @@ export default async function ShopOrdersPage({
                   </div>
                   <div className="text-right">
                     <p className="text-shop-gold font-semibold text-sm">
-                      {order.currency_code?.toUpperCase()} {order.total?.toLocaleString?.() || order.total}
+                      {(order.total / 100).toLocaleString(locale, { style: "currency", currency: order.currency_code })}
                     </p>
                     <p className="text-shop-text-muted text-xs capitalize">{order.status}</p>
                   </div>
                 </div>
-              </Link>
+              </div>
             ))}
           </div>
         )}
