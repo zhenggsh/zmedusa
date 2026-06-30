@@ -28,7 +28,16 @@
     "loading": "Loading...",
     "error": "Something went wrong",
     "new_arrivals": "New Arrivals",
-    "top_selling": "Top Selling"
+    "top_selling": "Top Selling",
+    "shop_now": "Shop Now",
+    "browse_all": "Browse All",
+    "search": "Search",
+    "search_results": "Search Results",
+    "search_prompt": "Enter a search term to find products.",
+    "browse_all_products": "Browse all products",
+    "results_for": "results for",
+    "no_products_found": "No products found for",
+    "tagline": "Premium gaming top-ups and digital goods. Fast, secure, and available worldwide."
   },
   "auth": {
     "welcome_back": "Welcome Back",
@@ -69,6 +78,51 @@
     "order_date": "Date",
     "order_total": "Total",
     "order_status": "Status",
-    "view_details": "View Details"
+    "view_details": "View Details",
+    "company": "Company",
+    "address": "Address",
+    "address_2_placeholder": "Apt, suite, etc.",
+    "city": "City",
+    "postal_code": "Postal Code",
+    "province": "Province",
+    "country": "Country",
+    "select": "Select",
+    "default_shipping_address": "Default shipping address"
+  },
+  "product": {
+    "add_to_cart": "Add to Cart",
+    "select_all_options": "Please select all options",
+    "combination_not_available": "Selected combination not available",
+    "added_to_cart": "Added to cart",
+    "add_to_cart_failed": "Failed to add to cart",
+    "out_of_stock": "Out of stock"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continue_shopping": "Continue Shopping",
+    "proceed_to_checkout": "Proceed to Checkout",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "order_summary": "Order Summary"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "address": "Address",
+    "shipping": "Shipping",
+    "payment": "Payment",
+    "review": "Review",
+    "progress_separator": "→",
+    "place_order": "Place Order",
+    "order_summary": "Order Summary"
+  },
+  "order": {
+    "confirmed": "Order Confirmed",
+    "thank_you": "Thank you for your order",
+    "order_number": "Order #",
+    "continue_shopping": "Continue Shopping"
   }
 }

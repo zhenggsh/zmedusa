@@ -28,7 +28,16 @@
     "loading": "Memuat...",
     "error": "Terjadi kesalahan",
     "new_arrivals": "Produk Baru",
-    "top_selling": "Terlaris"
+    "top_selling": "Terlaris",
+    "shop_now": "Belanja Sekarang",
+    "browse_all": "Lihat Semua",
+    "search": "Cari",
+    "search_results": "Hasil Pencarian",
+    "search_prompt": "Masukkan kata kunci untuk mencari produk.",
+    "browse_all_products": "Lihat semua produk",
+    "results_for": "hasil untuk",
+    "no_products_found": "Tidak ada produk ditemukan untuk",
+    "tagline": "Top-up game dan barang digital premium. Cepat, aman, dan tersedia di seluruh dunia."
   },
   "auth": {
     "welcome_back": "Selamat Datang Kembali",
@@ -69,6 +78,51 @@
     "order_date": "Tanggal",
     "order_total": "Total",
     "order_status": "Status",
-    "view_details": "Lihat Detail"
+    "view_details": "Lihat Detail",
+    "company": "Perusahaan",
+    "address": "Alamat",
+    "address_2_placeholder": "Apartemen, suite, dll.",
+    "city": "Kota",
+    "postal_code": "Kode Pos",
+    "province": "Provinsi",
+    "country": "Negara",
+    "select": "Pilih",
+    "default_shipping_address": "Alamat pengiriman utama"
+  },
+  "product": {
+    "add_to_cart": "Tambah ke Keranjang",
+    "select_all_options": "Silakan pilih semua opsi",
+    "combination_not_available": "Kombinasi yang dipilih tidak tersedia",
+    "added_to_cart": "Ditambahkan ke keranjang",
+    "add_to_cart_failed": "Gagal menambahkan ke keranjang",
+    "out_of_stock": "Stok habis"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continue_shopping": "Continue Shopping",
+    "proceed_to_checkout": "Proceed to Checkout",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "order_summary": "Order Summary"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "address": "Address",
+    "shipping": "Shipping",
+    "payment": "Payment",
+    "review": "Review",
+    "progress_separator": "→",
+    "place_order": "Place Order",
+    "order_summary": "Order Summary"
+  },
+  "order": {
+    "confirmed": "Order Confirmed",
+    "thank_you": "Thank you for your order",
+    "order_number": "Order #",
+    "continue_shopping": "Continue Shopping"
   }
 }

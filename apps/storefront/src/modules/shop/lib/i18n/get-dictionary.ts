@@ -32,6 +32,15 @@ export interface Dictionary {
     error: string
     new_arrivals: string
     top_selling: string
+    shop_now: string
+    browse_all: string
+    search: string
+    search_results: string
+    search_prompt: string
+    browse_all_products: string
+    results_for: string
+    no_products_found: string
+    tagline: string
   }
   auth: {
     welcome_back: string
@@ -73,6 +82,51 @@ export interface Dictionary {
     order_total: string
     order_status: string
     view_details: string
+    company: string
+    address: string
+    address_2_placeholder: string
+    city: string
+    postal_code: string
+    province: string
+    country: string
+    select: string
+    default_shipping_address: string
+  }
+  product: {
+    add_to_cart: string
+    select_all_options: string
+    combination_not_available: string
+    added_to_cart: string
+    add_to_cart_failed: string
+    out_of_stock: string
+  }
+  cart: {
+    title: string
+    empty: string
+    continue_shopping: string
+    proceed_to_checkout: string
+    quantity: string
+    remove: string
+    subtotal: string
+    shipping: string
+    total: string
+    order_summary: string
+  }
+  checkout: {
+    title: string
+    address: string
+    shipping: string
+    payment: string
+    review: string
+    progress_separator: string
+    place_order: string
+    order_summary: string
+  }
+  order: {
+    confirmed: string
+    thank_you: string
+    order_number: string
+    continue_shopping: string
   }
 }
 

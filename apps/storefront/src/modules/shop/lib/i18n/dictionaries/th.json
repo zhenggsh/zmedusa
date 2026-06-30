@@ -28,7 +28,16 @@
     "loading": "กำลังโหลด...",
     "error": "เกิดข้อผิดพลาด",
     "new_arrivals": "สินค้ามาใหม่",
-    "top_selling": "ขายดี"
+    "top_selling": "ขายดี",
+    "shop_now": "ช้อปเลย",
+    "browse_all": "ดูทั้งหมด",
+    "search": "ค้นหา",
+    "search_results": "ผลการค้นหา",
+    "search_prompt": "ป้อนคำค้นหาเพื่อค้นหาสินค้า",
+    "browse_all_products": "ดูสินค้าทั้งหมด",
+    "results_for": "ผลลัพธ์สำหรับ",
+    "no_products_found": "ไม่พบสินค้าสำหรับ",
+    "tagline": "เกมและสินค้าดิจิทัลระดับพรีเมียม รวดเร็ว ปลอดภัย พร้อมให้บริการทั่วโลก"
   },
   "auth": {
     "welcome_back": "ยินดีต้อนรับกลับ",
@@ -69,6 +78,51 @@
     "order_date": "วันที่",
     "order_total": "ยอดรวม",
     "order_status": "สถานะ",
-    "view_details": "ดูรายละเอียด"
+    "view_details": "ดูรายละเอียด",
+    "company": "บริษัท",
+    "address": "ที่อยู่",
+    "address_2_placeholder": "อพาร์ตเมนต์ ห้อง ฯลฯ",
+    "city": "เมือง",
+    "postal_code": "รหัสไปรษณีย์",
+    "province": "จังหวัด",
+    "country": "ประเทศ",
+    "select": "เลือก",
+    "default_shipping_address": "ที่อยู่จัดส่งเริ่มต้น"
+  },
+  "product": {
+    "add_to_cart": "เพิ่มลงตะกร้า",
+    "select_all_options": "กรุณาเลือกตัวเลือกทั้งหมด",
+    "combination_not_available": "ตัวเลือกที่เลือกไม่มีจำหน่าย",
+    "added_to_cart": "เพิ่มลงตะกร้าแล้ว",
+    "add_to_cart_failed": "เพิ่มลงตะกร้าไม่สำเร็จ",
+    "out_of_stock": "สินค้าหมด"
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "continue_shopping": "Continue Shopping",
+    "proceed_to_checkout": "Proceed to Checkout",
+    "quantity": "Quantity",
+    "remove": "Remove",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "order_summary": "Order Summary"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "address": "Address",
+    "shipping": "Shipping",
+    "payment": "Payment",
+    "review": "Review",
+    "progress_separator": "→",
+    "place_order": "Place Order",
+    "order_summary": "Order Summary"
+  },
+  "order": {
+    "confirmed": "Order Confirmed",
+    "thank_you": "Thank you for your order",
+    "order_number": "Order #",
+    "continue_shopping": "Continue Shopping"
   }
 }
