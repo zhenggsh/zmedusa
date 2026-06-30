@@ -98,32 +98,37 @@
     "out_of_stock": "สินค้าหมด"
   },
   "cart": {
-    "title": "Your Cart",
+    "title": "ตะกร้าของคุณ",
     "item_added": "เพิ่มลงตะกร้าแล้ว",
-    "empty": "Your cart is empty",
-    "continue_shopping": "Continue Shopping",
-    "proceed_to_checkout": "Proceed to Checkout",
-    "quantity": "Quantity",
-    "remove": "Remove",
-    "subtotal": "Subtotal",
-    "shipping": "Shipping",
-    "total": "Total",
-    "order_summary": "Order Summary"
+    "empty": "ตะกร้าของคุณว่างเปล่า",
+    "continue_shopping": "เลือกซื้อสินค้าต่อ",
+    "proceed_to_checkout": "ดำเนินการชำระเงิน",
+    "quantity": "จำนวน",
+    "increase_quantity_for": "เพิ่มจำนวน {product}",
+    "decrease_quantity_for": "ลดจำนวน {product}",
+    "remove": "นำออก",
+    "remove_product": "นำ {product} ออก",
+    "no_image": "ไม่มีรูปภาพ",
+    "update_failed": "อัปเดตตะกร้าไม่สำเร็จ",
+    "subtotal": "ยอดรวม",
+    "shipping": "ค่าจัดส่ง",
+    "total": "ยอดรวมทั้งสิ้น",
+    "order_summary": "สรุปคำสั่งซื้อ"
   },
   "checkout": {
-    "title": "Checkout",
-    "address": "Address",
-    "shipping": "Shipping",
-    "payment": "Payment",
-    "review": "Review",
+    "title": "ชำระเงิน",
+    "address": "ที่อยู่",
+    "shipping": "จัดส่ง",
+    "payment": "ชำระเงิน",
+    "review": "ตรวจสอบ",
     "progress_separator": "→",
-    "place_order": "Place Order",
-    "order_summary": "Order Summary"
+    "place_order": "สั่งซื้อ",
+    "order_summary": "สรุปคำสั่งซื้อ"
   },
   "order": {
-    "confirmed": "Order Confirmed",
-    "thank_you": "Thank you for your order",
-    "order_number": "Order #",
-    "continue_shopping": "Continue Shopping"
+    "confirmed": "ยืนยันคำสั่งซื้อแล้ว",
+    "thank_you": "ขอบคุณสำหรับคำสั่งซื้อ",
+    "order_number": "คำสั่งซื้อ #",
+    "continue_shopping": "เลือกซื้อสินค้าต่อ"
   }
 }

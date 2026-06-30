@@ -98,32 +98,37 @@
     "out_of_stock": "Stok habis"
   },
   "cart": {
-    "title": "Your Cart",
+    "title": "Keranjang Anda",
     "item_added": "Ditambahkan ke keranjang",
-    "empty": "Your cart is empty",
-    "continue_shopping": "Continue Shopping",
-    "proceed_to_checkout": "Proceed to Checkout",
-    "quantity": "Quantity",
-    "remove": "Remove",
+    "empty": "Keranjang Anda kosong",
+    "continue_shopping": "Lanjutkan Belanja",
+    "proceed_to_checkout": "Lanjutkan ke Checkout",
+    "quantity": "Jumlah",
+    "increase_quantity_for": "Tambah jumlah {product}",
+    "decrease_quantity_for": "Kurangi jumlah {product}",
+    "remove": "Hapus",
+    "remove_product": "Hapus {product}",
+    "no_image": "Tidak ada gambar",
+    "update_failed": "Gagal memperbarui keranjang",
     "subtotal": "Subtotal",
-    "shipping": "Shipping",
+    "shipping": "Pengiriman",
     "total": "Total",
-    "order_summary": "Order Summary"
+    "order_summary": "Ringkasan Pesanan"
   },
   "checkout": {
     "title": "Checkout",
-    "address": "Address",
-    "shipping": "Shipping",
-    "payment": "Payment",
-    "review": "Review",
+    "address": "Alamat",
+    "shipping": "Pengiriman",
+    "payment": "Pembayaran",
+    "review": "Tinjau",
     "progress_separator": "→",
-    "place_order": "Place Order",
-    "order_summary": "Order Summary"
+    "place_order": "Buat Pesanan",
+    "order_summary": "Ringkasan Pesanan"
   },
   "order": {
-    "confirmed": "Order Confirmed",
-    "thank_you": "Thank you for your order",
-    "order_number": "Order #",
-    "continue_shopping": "Continue Shopping"
+    "confirmed": "Pesanan Dikonfirmasi",
+    "thank_you": "Terima kasih atas pesanan Anda",
+    "order_number": "Pesanan #",
+    "continue_shopping": "Lanjutkan Belanja"
   }
 }

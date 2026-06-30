@@ -107,7 +107,12 @@ export interface Dictionary {
     continue_shopping: string
     proceed_to_checkout: string
     quantity: string
+    increase_quantity_for: string
+    decrease_quantity_for: string
     remove: string
+    remove_product: string
+    no_image: string
+    update_failed: string
     subtotal: string
     shipping: string
     total: string

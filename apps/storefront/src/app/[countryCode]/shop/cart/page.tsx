@@ -3,6 +3,7 @@ import { retrieveCart } from "@lib/data/cart"
 import { getDictionary } from "@modules/shop/lib/i18n/get-dictionary"
 import { i18n, Locale } from "@modules/shop/lib/i18n/config"
 import { EmptyCart } from "@modules/shop/cart/components/empty-cart"
+import { CartItems } from "@modules/shop/cart/components/cart-items"
 
 export default async function CartPage({
   params,
@@ -31,8 +32,7 @@ export default async function CartPage({
       </h1>
 
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 items-start">
-        {/* Cart line items will be inserted in Task 5 */}
-        <div className="text-shop-text-secondary">Cart items placeholder</div>
+        <CartItems cart={cart} dictionary={dictionary} countryCode={countryCode} locale={locale} />
         {/* Summary will be inserted in Task 6 */}
         <div className="text-shop-text-secondary">Summary placeholder</div>
       </div>
