@@ -18,7 +18,7 @@ export default async function CartPage({
     : i18n.defaultLocale
 
   const dictionary = await getDictionary(locale)
-  const cart = await retrieveCart().catch(() => null)
+  const cart = await retrieveCart()
 
   if (!cart || !cart.items?.length) {
     return <EmptyCart dictionary={dictionary} countryCode={countryCode} />

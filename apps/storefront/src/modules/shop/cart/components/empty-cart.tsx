@@ -20,11 +20,11 @@ export function EmptyCart({ dictionary, countryCode }: EmptyCartProps) {
       <h1 className="text-2xl font-bold text-shop-text-primary mb-2">
         {dictionary.cart.empty}
       </h1>
-      <Link href={`/${countryCode}/shop`}>
-        <Button variant="primary" className="mt-4">
+      <Button variant="primary" className="mt-4" asChild>
+        <Link href={`/${countryCode}/shop`}>
           {dictionary.cart.continue_shopping}
-        </Button>
-      </Link>
+        </Link>
+      </Button>
     </div>
   )
 }
