@@ -11,7 +11,7 @@ interface CheckoutProgressProps {
 
 export function CheckoutProgress({ dictionary }: CheckoutProgressProps) {
   const searchParams = useSearchParams()
-  const rawStep = searchParams.get("step") ?? "address"
+  const rawStep = searchParams?.get("step") ?? "address"
   const stepIndex = steps.indexOf(rawStep as (typeof steps)[number])
   const currentIndex = stepIndex >= 0 ? stepIndex : 0
 
