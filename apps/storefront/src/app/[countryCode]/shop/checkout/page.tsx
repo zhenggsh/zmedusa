@@ -11,10 +11,13 @@ import { CheckoutProgress } from "@modules/shop/checkout/components/checkout-pro
 
 export default async function CheckoutPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ countryCode: string }>
+  searchParams: Promise<{ step?: string }>
 }) {
   const { countryCode } = await params
+  const { step } = await searchParams
 
   const cookieStore = await cookies()
   const localeCookie = cookieStore.get("_shop_locale")?.value
@@ -27,6 +30,10 @@ export default async function CheckoutPage({
 
   if (!cart || !cart.items?.length) {
     redirect(`/${countryCode}/shop/cart`)
+  }
+
+  if (!cart.shipping_address && step !== "address") {
+    redirect(`/${countryCode}/shop/checkout?step=address`)
   }
 
   const customer = await retrieveCustomer().catch(() => null)

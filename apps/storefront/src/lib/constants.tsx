@@ -1,4 +1,5 @@
 import { CreditCard } from "@medusajs/icons"
+import Alipay from "@modules/common/icons/alipay"
 import Bancontact from "@modules/common/icons/bancontact"
 import Ideal from "@modules/common/icons/ideal"
 import PayPal from "@modules/common/icons/paypal"
@@ -32,6 +33,10 @@ export const paymentInfoMap: Record<
   pp_system_default: {
     title: "Manual Payment",
     icon: <CreditCard />,
+  },
+  pp_alipay_default: {
+    title: "Alipay",
+    icon: <Alipay />,
   },
   // Add more payment providers here
 }
