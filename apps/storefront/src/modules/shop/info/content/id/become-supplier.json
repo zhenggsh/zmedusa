@@ -1,0 +1,9 @@
+{
+  "title": "Menjadi Pemasok",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Bergabung dengan Jaringan Kami" },
+    { "type": "paragraph", "text": "Bermitra dengan ZShop untuk menjangkau audiens konsumen barang digital global." },
+    { "type": "heading", "level": 2, "text": "Persyaratan" },
+    { "type": "list", "items": ["Registrasi bisnis yang valid", "Produk digital berkualitas tinggi", "Harga kompetitif", "Manajemen inventori yang andal"] }
+  ]
+}

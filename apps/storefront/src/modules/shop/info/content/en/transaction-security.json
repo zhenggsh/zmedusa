@@ -1,0 +1,11 @@
+{
+  "title": "Transaction Security",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Secure Payments" },
+    { "type": "paragraph", "text": "All transactions are processed through PCI-DSS compliant payment gateways. Your card information is never stored on our servers." },
+    { "type": "heading", "level": 2, "text": "Encryption" },
+    { "type": "paragraph", "text": "We use TLS 1.3 encryption for all data transmission between your browser and our servers." },
+    { "type": "heading", "level": 2, "text": "Fraud Prevention" },
+    { "type": "list", "items": ["Real-time transaction monitoring", "3D Secure authentication", "Address verification", "Suspicious activity alerts"] }
+  ]
+}

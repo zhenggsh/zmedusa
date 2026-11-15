@@ -1,0 +1,9 @@
+{
+  "title": "Layanan Periklanan",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Bermitra Dengan Kami" },
+    { "type": "paragraph", "text": "Jangkau jutaan gamer dan konsumen digital melalui platform periklanan ZShop." },
+    { "type": "heading", "level": 2, "text": "Format Iklan" },
+    { "type": "list", "items": ["Iklan banner di halaman kategori", "Daftar produk sponsor", "Penempatan newsletter email", "Spot unggulan beranda"] }
+  ]
+}

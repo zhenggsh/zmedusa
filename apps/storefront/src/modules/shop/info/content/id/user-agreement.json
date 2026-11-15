@@ -1,0 +1,9 @@
+{
+  "title": "Perjanjian Pengguna",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Lisensi" },
+    { "type": "paragraph", "text": "ZShop memberi Anda lisensi terbatas, non-eksklusif, non-transferabel untuk menggunakan platform kami untuk tujuan pribadi, non-komersial." },
+    { "type": "heading", "level": 2, "text": "Kekayaan Intelektual" },
+    { "type": "paragraph", "text": "Semua konten, merek dagang, dan perangkat lunak di ZShop adalah milik ZShop ApS atau pemberi lisensinya." }
+  ]
+}

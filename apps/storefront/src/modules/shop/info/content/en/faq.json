@@ -1,0 +1,10 @@
+{
+  "title": "Frequently Asked Questions",
+  "sections": [
+    { "type": "faq", "question": "How do I place an order?", "answer": "Browse our catalog, add items to your cart, and proceed to checkout. Follow the payment instructions to complete your purchase." },
+    { "type": "faq", "question": "How long does delivery take?", "answer": "Digital products are delivered instantly. Physical items ship within 1-2 business days." },
+    { "type": "faq", "question": "What payment methods do you accept?", "answer": "We accept Visa, MasterCard, PayPal, and Alipay." },
+    { "type": "faq", "question": "Is my payment information secure?", "answer": "Yes. All payments are processed through PCI-DSS compliant gateways with TLS encryption." },
+    { "type": "faq", "question": "Can I change my order after placing it?", "answer": "Contact our support team immediately. We'll do our best to accommodate changes before processing." }
+  ]
+}

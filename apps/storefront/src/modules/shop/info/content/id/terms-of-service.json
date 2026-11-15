@@ -1,0 +1,11 @@
+{
+  "title": "Syarat Layanan",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Penerimaan Syarat" },
+    { "type": "paragraph", "text": "Dengan mengakses atau menggunakan ZShop, Anda setuju untuk terikat oleh Syarat Layanan ini." },
+    { "type": "heading", "level": 2, "text": "Akun Pengguna" },
+    { "type": "paragraph", "text": "Anda bertanggung jawab untuk menjaga kerahasiaan kredensial akun Anda dan untuk semua aktivitas di bawah akun Anda." },
+    { "type": "heading", "level": 2, "text": "Aktivitas yang Dilarang" },
+    { "type": "list", "items": ["Akses tidak sah ke sistem kami", "Transaksi penipuan", "Menjual kembali produk digital tanpa izin", "Pelecehan terhadap staf atau pengguna lain"] }
+  ]
+}

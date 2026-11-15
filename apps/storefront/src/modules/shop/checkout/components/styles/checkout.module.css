@@ -1,0 +1,27 @@
+/* Short-term visual shim: the legacy checkout form uses Medusa UI light-theme classes.
+   These overrides force the form inside the shop checkout wrapper to match the dark
+   shop theme. Replace with shop-native checkout components once they are built. */
+
+.shopCheckout :global(input),
+.shopCheckout :global(select),
+.shopCheckout :global(textarea) {
+  background-color: #232336 !important;
+  color: #ffffff !important;
+  border-color: #2a2a3c !important;
+}
+
+.shopCheckout :global(.bg-white) {
+  background-color: #232336 !important;
+}
+
+.shopCheckout :global(.text-ui-fg-base) {
+  color: #ffffff !important;
+}
+
+.shopCheckout :global(.text-ui-fg-subtle) {
+  color: #9ca3af !important;
+}
+
+.shopCheckout :global(.border-gray-200) {
+  border-color: #2a2a3c !important;
+}

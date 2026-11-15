@@ -1,0 +1,9 @@
+{
+  "title": "Kantor Global",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Kantor Pusat" },
+    { "type": "paragraph", "text": "ZShop ApS, Kopenhagen, Denmark" },
+    { "type": "heading", "level": 2, "text": "Kantor Regional" },
+    { "type": "list", "items": ["Eropa: Kopenhagen, Denmark", "Asia Pasifik: Bangkok, Thailand", "Asia Tenggara: Jakarta, Indonesia"] }
+  ]
+}

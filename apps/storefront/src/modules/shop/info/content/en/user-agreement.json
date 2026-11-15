@@ -1,0 +1,9 @@
+{
+  "title": "User Agreement",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "License" },
+    { "type": "paragraph", "text": "ZShop grants you a limited, non-exclusive, non-transferable license to use our platform for personal, non-commercial purposes." },
+    { "type": "heading", "level": 2, "text": "Intellectual Property" },
+    { "type": "paragraph", "text": "All content, trademarks, and software on ZShop are the property of ZShop ApS or its licensors." }
+  ]
+}

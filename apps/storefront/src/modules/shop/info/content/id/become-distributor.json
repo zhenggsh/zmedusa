@@ -1,0 +1,9 @@
+{
+  "title": "Menjadi Distributor",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Program Distributor" },
+    { "type": "paragraph", "text": "Kembangkan bisnis Anda dengan menjadi distributor ZShop yang sah di wilayah Anda." },
+    { "type": "heading", "level": 2, "text": "Manfaat" },
+    { "type": "list", "items": ["Harga grosir", "Dukungan pemasaran", "Manajer akun khusus", "Akses awal ke produk baru"] }
+  ]
+}

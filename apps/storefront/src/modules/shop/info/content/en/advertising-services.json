@@ -1,0 +1,9 @@
+{
+  "title": "Advertising Services",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Partner With Us" },
+    { "type": "paragraph", "text": "Reach millions of gamers and digital consumers through ZShop's advertising platform." },
+    { "type": "heading", "level": 2, "text": "Ad Formats" },
+    { "type": "list", "items": ["Banner ads on category pages", "Sponsored product listings", "Email newsletter placements", "Homepage featured spots"] }
+  ]
+}

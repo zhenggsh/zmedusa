@@ -1,0 +1,11 @@
+{
+  "title": "Kebijakan Pengembalian & Penukaran",
+  "sections": [
+    { "type": "heading", "level": 2, "text": "Barang Digital" },
+    { "type": "paragraph", "text": "Karena sifat produk digital, semua penjualan bersifat final setelah kunci atau kode produk telah dikirimkan." },
+    { "type": "heading", "level": 2, "text": "Barang Fisik" },
+    { "type": "paragraph", "text": "Barang fisik dapat dikembalikan dalam waktu 14 hari setelah pengiriman jika belum digunakan dan dalam kemasan asli." },
+    { "type": "heading", "level": 2, "text": "Proses Pengembalian Dana" },
+    { "type": "list", "items": ["Hubungi dukungan dalam waktu 14 hari", "Berikan nomor pesanan dan alasan", "Tunggu persetujuan (1-3 hari kerja)", "Pengembalian dana dikeluarkan ke metode pembayaran asli"] }
+  ]
+}
